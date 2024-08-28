@@ -204,7 +204,7 @@ const getSurahs=async()=>{
 async function apireading(num){
   console.log(num);
   
-  const res = await (await fetch(`http://api.alquran.cloud/v1/surah/${num}/ar.alafasy`)).json();
+  const res = await (await fetch(`https://api.alquran.cloud/v1/surah/${num}/ar.alafasy`)).json();
   console.log(res)
    console.log(res.data.ayahs);
    const ayahreading=res.data.ayahs;
