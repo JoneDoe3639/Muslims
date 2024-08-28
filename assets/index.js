@@ -138,7 +138,7 @@ const playLive=(channel)=>{
 // let apiSurahs=;
 
 const getSurahs=async()=>{
-  const res = await (await fetch(`http://api.alquran.cloud/v1/meta`)).json();
+  const res = await (await fetch(`https://api.alquran.cloud/v1/meta`)).json();
   // console.log(res.data.surahs.references  );
   const data =res.data.surahs.references;
   console.log(res);
