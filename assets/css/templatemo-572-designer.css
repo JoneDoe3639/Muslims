@@ -367,20 +367,21 @@ button:focus:not(:focus-visible) {
 }
 
 .main-banner h6 {
-  font-size: 20px;
-  color: #ff0000;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 2.5px;
+    font-size: 50px;
+    color: #54ff00;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    margin-top: 45px;
 }
 
 .main-banner h2 {
-  color: #1bff02;
-  font-size: 50px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 15px;
-  margin-bottom: 25px;
+    color: #ff0202;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 57px;
+    margin-bottom: 25px;
 }
 
 .main-banner h2 em {
@@ -1987,30 +1988,30 @@ i#toggel1{
   }
 }
 #searhByNmae{
-  text-align: center;
-  display: block;
-  margin: auto;
-  outline: 0;
-  width: 50%;
-  height: 40px;
-  border:1px solid rgb(0, 255, 64);
-  background:black;
-  color:red;
-  font-size: 20px;
-  border-radius:9px
+    text-align: center;
+    display: block;
+    margin: auto;
+    outline: 0;
+    width: 76%;
+    height: 40px;
+    border: 1px solid rgb(0, 255, 64);
+    background: black;
+    color: red;
+    font-size: 20px;
+    border-radius: 9px;
 }
 #searchBySurahName::placeholder{
   color:red
 }
 #abahs{
-  background: transparent;
-  color: #23d148;
-  outline: 0;
-  border: 0;
-  left: 65%;
-  margin-top: -38px;
-  position: absolute;
-  font-size: 25px;
+     background: transparent;
+    color: #23d148;
+    outline: 0;
+    border: 0;
+    left: 69%;
+    margin-top: -38px;
+    position: absolute;
+    font-size: 25px;
 }
 .con{
   min-width: 103%;
