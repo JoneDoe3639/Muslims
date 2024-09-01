@@ -155,7 +155,7 @@ for (let ind = 0; ind < surahName.length; ind++) {
 }
 let arr6=[];
 let arr7=[];
-searhByNmae.addEventListener('change',()=>{
+searhByNmae.addEventListener('input',()=>{
   if(searhByNmae.value===''){
     mainsec.innerHTML=' ';
     arr6=[];
