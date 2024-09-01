@@ -75,7 +75,7 @@ for (let ind = 0; ind < arr2.length; ind++) {
     ChangeBackGround();
 }
 let audiopl=document.querySelector('#audioPlayer1');
-if (time13 === time12 ) {
+if (time13 < time12 ) {
     audiopl.style.display='block';
     audiopl.src='./019--1.mp3';
     localStorage.setItem('Azan',pray);
