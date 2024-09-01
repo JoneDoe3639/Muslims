@@ -1746,19 +1746,19 @@ h3::before,h3::after{
   transform: translateX(-50%);
 }
 h3::after{
-  width: 30%;
-  bottom: -12px;
-  animation: anmiafter 3s  .1s infinite  both;
-  margin-bottom:80px;
-  height: 3px;
-  background-color:#1bff02
+     width: 30%;
+    bottom: -12px;
+    animation: anmiafter 2.2s .1s infinite both;
+    margin-bottom: 80px;
+    height: 3px;
+    background-color: #1bff02;
 }
 h3::before{
-  width: 100px;
-  bottom: -6px;
-  animation: name duration timing-function delay iteration-count direction fill-mode;
-  animation: anmibefore 1s  .3s  infinite both ;
-  background:red
+ width: 100px;
+    bottom: -6px;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: anmibefore 2.34s 0.1s infinite both;
+    background: red;
 }
 
 @keyframes anmibefore {
