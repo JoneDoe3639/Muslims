@@ -70,7 +70,7 @@ function ChangeBackGround (){
 for (let ind = 0; ind < arr2.length; ind++) {
    console.log(arr2[ind])
    if (arr2[ind] == time12 ) {
-    alert('gctt')
+    //alert('gctt')
   }
     ChangeBackGround();
 }
