@@ -137,6 +137,79 @@ const playLive=(channel)=>{
 
 // let apiSurahs=;
 
+
+
+
+function searchByName(surahName){
+  let abahs=document.querySelector('#abahs')
+  const mainsec =document.querySelector('.mainsec');
+  const searhByNmae=document.querySelector('#searhByNmae');
+
+
+console.log(surahName[0].name)
+let arr5=[];
+for (let ind = 0; ind < surahName.length; ind++) {
+  // console.log(surahName[ind]);
+  let data =surahName[ind];
+  arr5.push(data);
+}
+let arr6=[];
+let arr7=[];
+searhByNmae.addEventListener('change',()=>{
+  if(searhByNmae.value===''){
+    mainsec.innerHTML=' ';
+    arr6=[];
+    getSurahs();
+  }
+    for (let ind2 = 0; ind2 < arr5.length; ind2++) {
+      // console.log(arr5[ind2])
+      if (arr5[ind2].name==searhByNmae.value.toLowerCase()||arr5[ind2].englishNameTranslation.toLowerCase()==searhByNmae.value.toLowerCase()){
+        console.log('Founded');
+        arr6.push(arr5[ind2]);
+        mainsec.innerHTML='';
+      }
+      else if(arr5[ind2].englishNameTranslation[0]!==searhByNmae.value[0].toLowerCase()){
+        // console.log('Not Founded');
+        // mainsec.innerHTML='';
+        // alert('Not Founded')
+      }else{
+        console.log('Not Founded');
+      }
+    }
+    for (let ind3 = 0; ind3 < arr6.length; ind3++) {
+      mainsec.innerHTML+=`
+      <div class="contentsec"style='margin:10px,text-align:center'>
+      <h4 >${arr6[ind3].name}</h4>
+      <h4 >${arr6[ind3].englishNameTranslation}</h4>
+      </div>
+      `
+    }
+    const allcont=document.querySelectorAll('.contentsec');
+    
+    allcont.forEach((e,ind)=>{
+          e.addEventListener('click',()=>{
+           console.log(ind);
+           let subsec=document.querySelector('.subsec');
+           document.querySelector('#toggel1').style.display='block';
+           subsec.style.display='block';
+           mainsec.style.display='none';
+           document.querySelector('#readsurah3').innerText=`قراءه السور`;           
+           apireading(arr6[ind].number);
+          })
+    })
+    document.querySelector('#toggel1').style.display='none';
+    // console.log(arr6);
+    // console.log(arr7);
+    
+  })
+
+
+}
+
+
+
+
+
 const getSurahs=async()=>{
   const res = await (await fetch(`https://api.alquran.cloud/v1/meta`)).json();
   // console.log(res.data.surahs.references  );
@@ -146,6 +219,7 @@ const getSurahs=async()=>{
   let submainsec=document.querySelector('.submainsec');
   let abahs=document.querySelector('#abahs')
   const searhByNmae=document.querySelector('#searhByNmae');
+      searchByName(data);
   for (let ind = 0; ind < data.length; ind++) {
     let surahsearch=data[ind].name;
     let surahsearchENg=data[ind].englishNameTranslation;
