@@ -1756,8 +1756,7 @@ h3::after{
 h3::before{
  width: 100px;
     bottom: -6px;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation: anmibefore 2.34s 0.1s infinite both;
+    animation: anmibefore 3s 0.8s infinite both;
     background: red;
 }
 
